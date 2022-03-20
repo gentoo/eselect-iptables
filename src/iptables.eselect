@@ -78,7 +78,7 @@ get_symlinks_list() {
 		iptables)
 			printf -- '%s\n' "${IPTABLES_SYMLINKS[@]}"
 
-			if [[ ${1} == -a ]] || has_version 'net-firewall/iptables[ipv6]'
+			if [[ ${1} == -a ]] || has_version 'net-firewall/iptables[ipv6(+)]'
 			then
 				printf -- '%s\n' "${IP6TABLES_SYMLINKS[@]}"
 			fi
